@@ -1,0 +1,31 @@
+{
+  "name": "@icholy/no-ts-breakpoint-bug",
+  "version": "0.0.2",
+  "description": "For debugging missing breakpoints in vscode",
+  "type": "commonjs",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "typesVersions": {
+    "*": {
+      "lib/index.js": [
+        "lib/index.d.ts"
+      ],
+      "*": [
+        "lib/*"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rimraf ./lib && tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
